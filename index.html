@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To do list dinamica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+      <img :src="logo" alt="">
+      <div class="nav">
+        <input v-model="item" placeholder="Cosa c'è da fare?">
+        <button @click="add" type="button" name="button">Aggiungi</button>
+      </div>
+      <div class="toDoList">
+        <ul>
+          <li v-for="(item, index) in list"> {{ item }}
+          </li>
+        </ul>
+      </div>
+
+
+
+    </div>
+
+
+    <!-- Riferimento javascript -->
+    <script type="text/javascript" src="js/script.js">
+
+    </script>
+  </body>
+</html>
