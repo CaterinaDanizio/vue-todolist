@@ -11,12 +11,22 @@ var app = new Vue({
   data: {
     logo: "https://img.icons8.com/clouds/2x/todo-list.png",
     item: "",
-    list: [],
+    list: ["Portare a passeggio Daisy", "Andare a fare la spesa"],
 },
 
   methods: {
        add: function() {
-         this.list.push(this.item);
-       }
+         this.list.push(this.item),
+         this.item = ""
+       },
+
+       // reset: function() {
+       //   this.item.value: "",
+       // }
+      remove: function(index){
+         this.list.splice(index, 1);
+       },
      },
+
+
 });

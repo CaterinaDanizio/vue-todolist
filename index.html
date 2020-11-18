@@ -3,22 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>To do list dinamica</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   </head>
   <body>
     <div id="app">
       <img :src="logo" alt="">
       <div class="nav">
-        <input v-model="item" placeholder="Cosa c'è da fare?">
-        <button @click="add" type="button" name="button">Aggiungi</button>
+        <input v-model="item" v-on:keyup.enter="add"  placeholder="Cosa c'è da fare?">
+        <button  @click="add" type="button" name="button">Aggiungi</button>
       </div>
       <div class="toDoList">
         <ul>
           <li v-for="(item, index) in list"> {{ item }}
+            <i class="fas fa-times"  @click="remove(index)"></i>
           </li>
+
+
         </ul>
+
       </div>
 
 

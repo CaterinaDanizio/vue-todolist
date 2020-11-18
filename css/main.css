@@ -2,12 +2,15 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 18px;
 }
 
 #app {
   height: 100vh;
   text-align: center;
-  background-image: url('https://storage.needpix.com/rsynced_images/sticky-paper.jpg');
+  background-image: url('https://25again.com/wp-content/uploads/2019/08/desk-background.jpg');
+  background-position: right;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -18,18 +21,27 @@ input, button {
   margin-bottom: 10px;
 }
 
-
-
 .toDoList {
+
   width: 70%;
   min-height: 200px;
   margin: 0 auto;
-  background-color: rgb(246, 248, 250);
+  /* background-color: rgb(218, 235, 241); */
+  background-image: url("https://img.freepik.com/premium-photo/chalk-rubbed-out-blackboard_34170-30.jpg?size=626&ext=jpg");
   text-align: left;
   padding: 10px 30px;
+  color: white;
 }
 
 .toDoList li {
   list-style: none;
   border-bottom: 1px solid lightgrey;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.toDoList i {
+  color: rgb(86, 119, 180);
+  cursor: pointer;
 }
