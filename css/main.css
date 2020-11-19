@@ -7,14 +7,14 @@
 }
 
 #app {
-  height: 100vh;
+  min-height: 100vh;
   background-image: url('https://25again.com/wp-content/uploads/2019/08/desk-background.jpg');
   background-position: right;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-nav {
+nav, footer {
   text-align: center;
 }
 
@@ -28,13 +28,14 @@ input, button {
   width: 70%;
   min-height: 200px;
   margin: 0 auto;
+  color: white;
   background-image: url("https://img.freepik.com/premium-photo/chalk-rubbed-out-blackboard_34170-30.jpg?size=626&ext=jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  text-align: left;
+  border: 8px solid white;
   margin-top: 10px;
+  margin-bottom: 10px;
   padding: 10px 30px;
-  color: white;
 }
 
 .toDoList li {
@@ -48,4 +49,9 @@ input, button {
 .toDoList i {
   color: rgb(86, 119, 180);
   cursor: pointer;
+}
+
+footer {
+  min-height: 50px;
+  background-color: lightgrey;
 }

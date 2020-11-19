@@ -13,19 +13,29 @@ var app = new Vue({
     logo: "https://img.icons8.com/clouds/2x/todo-list.png",
     item: "",
     list: ["Portare a passeggio Daisy", "Andare a fare la spesa"],
+    credits: "Powered by Boolean Careers",
 },
 
   methods: {
        add: function() {
-         this.list.push(this.item),
-         this.item = ""
+        if(this.item === "") {
+          alert("Attenzione! Non hai inserito nessuna attività");
+        }
+        if (this.list.includes(this.item)) {
+          alert("Attenzione! Hai già inserito questa attività");
+          this.item = "";
+        }
+        else {
+          this.list.push(this.item);
+          this.item = "";
+        }
        },
-
 
       remove: function(index){
          this.list.splice(index, 1);
+        if(this.list.length <= 0) {
+          alert("Complimenti, hai completato tutte le tue attività!")
+        }
        },
      },
-
-
 });

@@ -17,13 +17,18 @@
         <input v-model="item" v-on:keyup.enter="add"  placeholder="Cosa c'è da fare?">
         <button  @click="add" type="button" name="button">Aggiungi</button>
       </nav>
-      <div class="toDoList">
+      <main class="toDoList">
         <ul>
-          <li v-for="(item, index) in list"> {{ item }}
-            <i :class="esc" @click="remove(index)"></i>
+          <li v-for="(item, index) in list">
+            {{ item }}
+            <i :class="esc" @click="remove(index)">
+            </i>
           </li>
         </ul>
-      </div>
+      </main>
+      <footer id="footer">
+        <h5> {{ credits }} </h5>
+      </footer>
     </div>
 
     <!-- Riferimento javascript -->
