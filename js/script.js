@@ -9,6 +9,7 @@
 var app = new Vue({
   el: '#app',
   data: {
+    esc: "fas fa-times",
     logo: "https://img.icons8.com/clouds/2x/todo-list.png",
     item: "",
     list: ["Portare a passeggio Daisy", "Andare a fare la spesa"],
@@ -20,7 +21,7 @@ var app = new Vue({
          this.item = ""
        },
 
-       
+
       remove: function(index){
          this.list.splice(index, 1);
        },

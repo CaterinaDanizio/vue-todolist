@@ -11,30 +11,23 @@
   </head>
   <body>
     <div id="app">
-      <img :src="logo" alt="">
-      <div class="nav">
+      <nav>
+        <img :src="logo" alt="">
+        <h3>Compila la tua to-do list</h3>
         <input v-model="item" v-on:keyup.enter="add"  placeholder="Cosa c'è da fare?">
         <button  @click="add" type="button" name="button">Aggiungi</button>
-      </div>
+      </nav>
       <div class="toDoList">
         <ul>
           <li v-for="(item, index) in list"> {{ item }}
-            <i class="fas fa-times"  @click="remove(index)"></i>
+            <i :class="esc" @click="remove(index)"></i>
           </li>
-
-
         </ul>
-
       </div>
-
-
-
     </div>
-
 
     <!-- Riferimento javascript -->
     <script type="text/javascript" src="js/script.js">
-
     </script>
   </body>
 </html>
