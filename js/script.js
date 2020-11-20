@@ -19,10 +19,10 @@ var app = new Vue({
   methods: {
        add: function() {
         if(this.item === "") {
-          alert("Attenzione! Non hai inserito nessuna attività");
+          return alert("Attenzione! Non hai inserito nessuna attività");
         }
         if (this.list.includes(this.item)) {
-          alert("Attenzione! Hai già inserito questa attività");
+          return alert("Attenzione! Hai già inserito questa attività");
           this.item = "";
         }
         else {
